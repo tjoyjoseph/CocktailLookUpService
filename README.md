@@ -9,7 +9,7 @@ We'd like you to write a small app with the following requirements:
 
 * Restful API  
 * Use of any 3rd party API services
-* Java 8
+* Version of Java you like the most
 * Readme file explaining how to build / run your app.
 
 On the 3rd party API side, the choice is yours, from the Star wars API (https://swapi.co), Github(https://developer.github.com/v3/search/#search-issues), (Random User API (https://randomuser.me), .....
@@ -29,7 +29,7 @@ We could be sneaky and not say anything else, but here's some things we always l
 
 ### Submission notes
 
-You can just submit a PR here, create a private repo for free on [GitLab](https://www.gitlab.com) or [Bitbucket](https://bitbucket.org/), or just send us the repo by email. Whatever you prefer.
+You can just submit a PR here, create a private repo, or just send us the repo by email. Whatever you prefer.
 
 ---
 
