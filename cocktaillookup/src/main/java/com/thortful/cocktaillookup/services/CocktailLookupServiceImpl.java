@@ -12,12 +12,24 @@ import java.net.URL;
 public class CocktailLookupServiceImpl implements CocktailLookupService{
     final String BASEURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?";
     final String SEARCH_NAME = "s=";
+    final String SEARCH_LETTER = "f=";
 
     final ObjectMapper objectMapper = new ObjectMapper();
     @Override
     @Cacheable("cocktailName")
-    public Drinks getCocktails(String cocktailName) throws IOException {
-    URL url = new URL(BASEURL+SEARCH_NAME+cocktailName);
-    return objectMapper.readValue(url,Drinks.class);
+    public Drinks getCocktails(String name) throws IOException {
+        return getDrinks(SEARCH_NAME,name);
+    }
+
+    @Override
+    @Cacheable("cocktailName")
+    public Drinks getCocktailsFromLetter(String letter) throws IOException {
+        return getDrinks(SEARCH_LETTER, String.valueOf(letter));
+    }
+
+    private Drinks getDrinks(String searchCriteria, String value) throws IOException {
+        URL url = new URL(BASEURL+searchCriteria+value);
+        Drinks drinks = objectMapper.readValue(url,Drinks.class);
+        return drinks;
     }
 }
