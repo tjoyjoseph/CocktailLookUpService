@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehcache>
+    <defaultCache eternal="true" maxElementsInMemory="100" overflowToDisk="false" />
+    <cache alias="cocktailName">
+        <expiry>
+            <ttl unit="days">1</ttl>
+        </expiry>
+        <heap>100</heap>
+    </cache>
+</ehcache>
